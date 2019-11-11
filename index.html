@@ -1,15 +1,13 @@
 <html>
    <script>
     function changeBodyBg(color){
-        document.body.style.backgroundColor = color;
-    }
-    
-    var url = new URL(window.location.href);
-    var color = url.searchParams.get("color");
-    
-    if(color) {
-      changeBodyBg("#" + color);
+       var url = new URL(window.location.href);
+       var color = url.searchParams.get("color");
+
+       if(color) {
+         document.body.style.backgroundColor = color;
+       }
     }
   </script>
-   <body style="min-width:100%;min-height=100px;min-height: 100%;"></body>
+   <body style="min-width:100%;min-height=100px;min-height: 100%;" onLoad="changeBodyBg()"></body>
 </html>
